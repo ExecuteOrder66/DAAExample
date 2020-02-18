@@ -1,4 +1,9 @@
+DROP DATABASE daaexample;
 CREATE DATABASE `daaexample`;
+
+DROP USER 'daa'@'localhost';
+CREATE USER 'daa'@'localhost' IDENTIFIED WITH mysql_native_password BY 'daa';
+GRANT ALL PRIVILEGES ON * . * TO 'daa'@'localhost';
 
 CREATE TABLE `daaexample`.`people` (
 	`id` int NOT NULL AUTO_INCREMENT,
